@@ -24,6 +24,7 @@ func on_look() -> void:
 	await C.player.walk_to_clicked()
 	await C.player.face_clicked()
 	await G.show_system_text("Your trusty mop. Standard issue, model M-1 Swabbie. It smells like every floor on this ship.")
+	await C.player.say("All the other janitors get new mops...")
 
 
 func on_interact() -> void:

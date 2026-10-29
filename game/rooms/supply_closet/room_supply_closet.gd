@@ -70,8 +70,11 @@ func _on_restore_from_savegame() -> void:
 
 #region Public #####################################################################################
 # Sierra-style death, with a modern rewind: Roger is put back on his feet in this room.
-func rewind_after_death() -> void:
-	await G.show_system_text("Thank you for playing Space Quest: A Clean Sweep. Click to rewind time and try again.")
+func rewind_after_death(title := "") -> void:
+	if title:
+		await G.show_system_text(title)
+	await G.show_system_text("Thanks for playing Clean Sweep. As usual, you've been a real pantload!")
+	await G.show_system_text("Click to rewind time and try again.")
 	C.player.teleport_to_marker("Start")
 	C.player.face_right()
 

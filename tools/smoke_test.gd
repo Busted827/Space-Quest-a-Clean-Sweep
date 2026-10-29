@@ -26,6 +26,14 @@ func _run() -> void:
 	await get_tree().create_timer(8.0).timeout
 	var room = R.SupplyCloset
 	print("[smoke] intro_done=", room.state.intro_done)
+	await C.player.on_look()
+	await C.player.on_interact()
+	await C.player.on_talk()
+	await E.command_fallback()
+	await room.get_hotspot("Shelves").on_talk()
+	await room.get_prop("Mop").on_look()
+	await room.rewind_after_death("Life sucks... again.")
+	print("[smoke] quotes ok")
 	await room.get_hotspot("Locker").on_interact()
 	print("[smoke] locker without combo, open=", room.state.locker_open)
 	await room.get_hotspot("CeilingTile").on_look()

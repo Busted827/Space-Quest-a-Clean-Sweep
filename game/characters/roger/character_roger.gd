@@ -50,14 +50,6 @@ func _on_middle_click() -> void:
 #	await C.player.say("I don't want to talk to this guy")
 
 
-# Called when the character is clicked while an inventory item is selected
-func _on_item_used(_item: PopochiuInventoryItem) -> void:
-	# Replace the call to E.command_fallback() with your own logic.
-	E.command_fallback()
-	# Example: if the player uses a Key on this character, make the player say something.
-#	if _item == I.Key:
-#		await C.player.say("I don't want to give my key away!")
-
 
 # Override this to alter the idle animation or hook custom logic to it. 
 # By default, it plays the "idle" animation from the character's Sprite.
@@ -130,6 +122,30 @@ func _on_blocked_by_region(_region: PopochiuRegion) -> void:
 # character is the target.
 # This keeps the code way more tidy and organized with GUIs with many different commands,
 # as opposed to having a single `match` statement in the general-use methods.
+
+
+#endregion
+
+
+#region Commands ###################################################################################
+func on_look() -> void:
+	await G.show_system_text("It's you, Roger Wilco: Space Janitor. The suit's still white. Ish.")
+
+
+func on_interact() -> void:
+	await G.show_system_text("Hey, keep your hands off yourself! This is a family game.")
+
+
+func on_talk() -> void:
+	await G.show_system_text("You take a deep sniff. The aroma of several adventure games, and a mop bucket, emanates from your person.")
+
+
+func _on_item_used(item: PopochiuInventoryItem) -> void:
+	if item == I.Mop:
+		await G.show_system_text("You mop yourself. Somewhere, a health inspector faints.")
+		return
+
+	E.command_fallback()
 
 
 #endregion
