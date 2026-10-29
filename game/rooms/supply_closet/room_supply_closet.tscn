@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://crevnax3dv451" path="res://game/rooms/supply_closet/hotspots/locker/hotspot_locker.tscn" id="12_p7taa"]
 [ext_resource type="PackedScene" uid="uid://muj7ghf2obbt" path="res://game/rooms/supply_closet/hotspots/door/hotspot_door.tscn" id="13_2spmd"]
 [ext_resource type="PackedScene" uid="uid://lp8nli0adf2f" path="res://game/rooms/supply_closet/markers/start/marker_start.tscn" id="15_tta5k"]
+[ext_resource type="PackedScene" uid="uid://c51scltvxu1dw" path="res://game/rooms/supply_closet/regions/depth/region_depth.tscn" id="15_ik04p"]
 
 [node name="RoomSupplyCloset" type="Node2D" unique_id=371513164]
 script = ExtResource("1_jyp7g")
@@ -80,6 +81,13 @@ description = "door"
 walk_to_point = Vector2(-3, 120)
 
 [node name="Regions" type="Node2D" parent="." unique_id=1951323163]
+
+[node name="Depth" parent="Regions" unique_id=1938585778 instance=ExtResource("15_ik04p")]
+position = Vector2(320, 298)
+description = "depth"
+scaling = true
+scale_top = 0.75
+scale_bottom = 1.05
 
 [node name="Markers" type="Node2D" parent="." unique_id=1591781919]
 

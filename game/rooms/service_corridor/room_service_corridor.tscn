@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://dyad0bujbxhmo" path="res://game/rooms/service_corridor/hotspots/chute/hotspot_chute.tscn" id="13_g3pmg"]
 [ext_resource type="PackedScene" uid="uid://bqtobq6iec66i" path="res://game/rooms/service_corridor/hotspots/lifts/hotspot_lifts.tscn" id="14_upwd8"]
 [ext_resource type="PackedScene" uid="uid://c8nv3nhox3bdp" path="res://game/rooms/service_corridor/markers/from_closet/marker_from_closet.tscn" id="17_xvn4b"]
+[ext_resource type="PackedScene" uid="uid://dqrs10sdstj18" path="res://game/rooms/service_corridor/regions/depth/region_depth.tscn" id="17_he2vh"]
 
 [node name="RoomServiceCorridor" type="Node2D" unique_id=568916774]
 script = ExtResource("1_3igt8")
@@ -96,6 +97,13 @@ description = "lifts"
 walk_to_point = Vector2(-3, 115)
 
 [node name="Regions" type="Node2D" parent="." unique_id=426221072]
+
+[node name="Depth" parent="Regions" unique_id=1801939584 instance=ExtResource("17_he2vh")]
+position = Vector2(320, 298)
+description = "depth"
+scaling = true
+scale_top = 0.75
+scale_bottom = 1.05
 
 [node name="Markers" type="Node2D" parent="." unique_id=1672545267]
 

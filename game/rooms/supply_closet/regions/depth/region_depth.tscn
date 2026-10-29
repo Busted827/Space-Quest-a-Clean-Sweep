@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://c51scltvxu1dw"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/regions/depth/region_depth.gd" id="1_sl3ms"]
+
+[node name="Depth" type="Area2D" unique_id=1938585778]
+monitorable = false
+script = ExtResource("1_sl3ms")
+script_name = "Depth"
+description = "Depth"
+interaction_polygon = PackedVector2Array(-320, -62, 320, -62, 320, 62, -320, 62)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=717571527]
+visible = false
+modulate = Color(0, 1, 1, 1)
+polygon = PackedVector2Array(-320, -62, 320, -62, 320, 62, -320, 62)
