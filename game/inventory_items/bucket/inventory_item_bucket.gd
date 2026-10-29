@@ -51,8 +51,28 @@ func _on_discard() -> void:
 #endregion
 
 #region Public #####################################################################################
+const FILTH_NAMES := ["Spotless", "Murky", "Greasy", "Sludgy", "Unspeakable", "Biohazard"]
+const FILTH_LOOKS := [
+	"Your bucket. Filth Meter: Spotless. Every mess you mop makes it grosser, and gross is exactly what you will need.",
+	"Your bucket. Filth Meter: Murky. Grey water with things floating in it. A promising start.",
+	"Your bucket. Filth Meter: Greasy. A rainbow sheen swirls on top. It's almost pretty, in a deeply wrong way.",
+	"Your bucket. Filth Meter: Sludgy. The water has stopped sloshing. It now oozes.",
+	"Your bucket. Filth Meter: Unspeakable. We will not speak of it.",
+	"Your bucket. Filth Meter: BIOHAZARD. Somewhere, Dr. Sterilis just felt a chill and doesn't know why.",
+]
+
+
 func on_look() -> void:
-	await G.show_system_text("Your bucket. Filth Meter: Spotless. Every mess you mop makes it grosser, and gross is exactly what you will need.")
+	await G.show_system_text(FILTH_LOOKS[state.filth])
+
+
+# Raises the Filth Meter. The inventory picture gets grosser at each level.
+func add_filth(level: int) -> void:
+	if level <= state.filth:
+		return
+	state.filth = level
+	texture = load("res://game/placeholders/inv_bucket_%d.png" % level)
+	await G.show_system_text("Filth Meter: %s." % FILTH_NAMES[level])
 
 
 #endregion

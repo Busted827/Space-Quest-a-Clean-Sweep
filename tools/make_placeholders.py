@@ -134,4 +134,71 @@ bucket()
 icon("inv_mop.png", (200, 196, 170), "M")
 icon("inv_bucket.png", (220, 190, 60), "B")
 icon("inv_keycard.png", (150, 200, 210), "K")
+def corridor():
+    # Service Corridor: long hall, doors along the back wall, a drip feeding a puddle.
+    img = Image.new("RGB", (640, 360), WALL)
+    d = ImageDraw.Draw(img)
+    d.rectangle([0, 0, 639, 40], fill=WALL_DARK)
+    for x in range(0, 640, 64):
+        d.line([x, 0, x, 40], fill=INK)
+    # Leaky pipe along the ceiling, dripping over the puddle
+    d.rectangle([0, 44, 639, 52], fill=METAL_DARK, outline=INK)
+    d.rectangle([414, 52, 426, 64], fill=METAL, outline=INK)
+    for y in (76, 104, 140):
+        d.ellipse([417, y, 423, y + 8], fill=(150, 170, 150))
+    d.rectangle([0, 236, 639, 359], fill=FLOOR)
+    for y in range(252, 360, 18):
+        d.line([0, y, 639, y], fill=FLOOR_LINE)
+    d.rectangle([0, 232, 639, 238], fill=TRIM)
+
+    def door(x0, x1, label, color=METAL_DARK):
+        d.rectangle([x0, 96, x1, 236], fill=color, outline=INK, width=2)
+        d.line([(x0 + x1) // 2, 96, (x0 + x1) // 2, 236], fill=INK)
+        d.rectangle([x0, 80, x1, 94], fill=INK)
+        d.text((x0 + 4, 82), label, fill=AMBER)
+
+    door(14, 74, "13-B")
+    door(120, 190, "CREW")
+    door(236, 306, "GALLEY")
+    door(440, 506, "STAFF", (110, 70, 70))
+    # Lift lobby archway at the far end
+    d.rectangle([566, 70, 639, 236], fill=(30, 44, 56), outline=INK, width=2)
+    d.text((576, 74), "LIFTS", fill=AMBER)
+    # Waste chute hatch, low on the wall
+    d.rectangle([520, 196, 552, 230], fill=METAL, outline=INK, width=2)
+    d.text((522, 186), "CHUTE", fill=WHITE)
+    # PA speaker and poster
+    d.ellipse([206, 60, 226, 80], fill=METAL_DARK, outline=INK)
+    d.rectangle([326, 110, 400, 180], fill=(230, 220, 190), outline=INK)
+    d.text((332, 116), "A CLEAN", fill=INK)
+    d.text((332, 128), "SHIP IS A", fill=INK)
+    d.text((332, 140), "HAPPY SHIP", fill=INK)
+    d.text((332, 162), "-Dr. P. Ure", fill=(40, 90, 120))
+    d.text((8, 344), "PLACEHOLDER ART", fill=FLOOR_LINE)
+    save(img, "service_corridor_bg.png")
+
+
+def puddle():
+    img = Image.new("RGBA", (130, 30), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.ellipse([0, 4, 129, 29], fill=(120, 140, 120, 220), outline=(80, 96, 80))
+    d.ellipse([30, 10, 70, 18], fill=(170, 190, 170, 200))
+    save(img, "puddle.png")
+
+
+def bucket_icons():
+    # The Filth Meter: the bucket icon gets grosser at each level (0 to 5).
+    water = [None, (120, 130, 120), (120, 100, 50), (80, 90, 40), (90, 60, 80), (60, 120, 30)]
+    for level in range(1, 6):
+        img = Image.new("RGBA", (24, 24), (0, 0, 0, 0))
+        d = ImageDraw.Draw(img)
+        d.rectangle([2, 2, 21, 21], fill=(220, 190, 60), outline=INK)
+        d.rectangle([4, 4, 19, 9], fill=water[level])
+        d.text((8, 11), str(level), fill=INK)
+        save(img, "inv_bucket_%d.png" % level)
+
+
+corridor()
+puddle()
+bucket_icons()
 print("placeholders written to", OUT)

@@ -5,6 +5,9 @@ extends PopochiuInventoryItemData
 # Use `save_custom` and `load_custom` to handle custom types.
 # Note: `script_name` and `scene` variables inherited from the base class are not saved.
 
+# The Filth Meter: 0 (Spotless) to 5 (Biohazard). See the design doc's Puzzles section.
+var filth := 0
+
 
 #region Virtual ####################################################################################
 # Return a Dictionary of custom data to save for this PopochiuInventoryItem.

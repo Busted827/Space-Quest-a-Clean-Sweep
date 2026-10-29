@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://doxnq6qyrd66d"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/hotspots/galley_door/hotspot_galley_door.gd" id="1_hr6bm"]
+
+[node name="GalleyDoor" type="Area2D" unique_id=1344769278]
+script = ExtResource("1_hr6bm")
+script_name = "GalleyDoor"
+description = "Galley Door"
+cursor = 1
+interaction_polygon = PackedVector2Array(-35, -70, 35, -70, 35, 70, -35, 70)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=597278000]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

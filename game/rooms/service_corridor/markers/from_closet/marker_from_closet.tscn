@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://c8nv3nhox3bdp"]
+
+[node name="FromCloset" type="Marker2D" unique_id=1879747648]
+visible = false

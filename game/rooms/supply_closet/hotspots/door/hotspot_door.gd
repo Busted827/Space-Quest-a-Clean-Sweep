@@ -33,8 +33,10 @@ func on_interact() -> void:
 		await C.player.say("I'm not going out there without my mop and bucket. A janitor without a mop is just a guy.")
 		return
 
-	await C.player.say("Okay, Wilco. Mop, bucket, keycard. Time to be a hero. Or at least a janitor.")
-	await G.show_system_text("To be continued! The Service Corridor arrives in the next build.")
+	if not R.SupplyCloset.state.left_once:
+		R.SupplyCloset.state.left_once = true
+		await C.player.say("Okay, Wilco. Mop, bucket, keycard. Time to be a hero. Or at least a janitor.")
+	R.goto_room("ServiceCorridor")
 
 
 func on_talk() -> void:

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://2rl5foroc0ls"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/hotspots/staff_door/hotspot_staff_door.gd" id="1_elmws"]
+
+[node name="StaffDoor" type="Area2D" unique_id=961879349]
+script = ExtResource("1_elmws")
+script_name = "StaffDoor"
+description = "Staff Door"
+cursor = 1
+interaction_polygon = PackedVector2Array(-33, -70, 33, -70, 33, 70, -33, 70)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1992858741]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

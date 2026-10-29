@@ -10,6 +10,7 @@ var combo_known := false
 var locker_open := false
 var mop_taken := false
 var bucket_taken := false
+var left_once := false
 
 
 #region Virtual ####################################################################################

@@ -21,6 +21,10 @@ func _on_room_entered() -> void:
 	if not state.intro_done:
 		C.player.teleport_to_marker("Start")
 		C.player.face_right()
+	elif state.left_once:
+		# Back from the Service Corridor: stand by the door.
+		C.player.position = Vector2(590, 318)
+		C.player.face_left()
 
 
 # Called after the room transition completes; the room is now visible.

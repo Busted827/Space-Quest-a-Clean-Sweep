@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://88n10h5cfbh8"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/props/puddle/prop_puddle.gd" id="1_1n87c"]
+
+[node name="Puddle" type="Area2D" unique_id=425584614]
+script = ExtResource("1_1n87c")
+script_name = "Puddle"
+description = "Puddle"
+cursor = 1
+interaction_polygon = PackedVector2Array(-65, -30, 65, -30, 65, 0, -65, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1724832961]
+offset = Vector2(0, -15)
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=534598773]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1599218307]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=493921528]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true
