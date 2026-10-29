@@ -30,6 +30,7 @@ T="*uid://30lm6k5s368s"
 [display]
 
 window/size/viewport_width=640
+window/size/mode=3
 window/size/viewport_height=360
 window/size/window_width_override=1280
 window/size/window_height_override=720

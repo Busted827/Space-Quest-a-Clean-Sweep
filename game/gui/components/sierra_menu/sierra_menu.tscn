@@ -99,6 +99,17 @@ region = Rect2(0, 24, 24, 24)
 atlas = ExtResource("12_w05ne")
 region = Rect2(0, 24, 24, 24)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sq5menu"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+content_margin_top = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.509804, 0.596078, 0.584314, 1)
+border_width_top = 1
+border_width_bottom = 1
+border_color = Color(0.0784314, 0.109804, 0.109804, 1)
+anti_aliasing = false
+
 [node name="SierraMenu" type="Control" groups=["popochiu_gui_component"]]
 layout_mode = 3
 anchors_preset = 15
@@ -114,16 +125,18 @@ script = ExtResource("2_8nno7")
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 24.0
+offset_bottom = 30.0
 grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sq5menu")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 6
+alignment = 1
 
 [node name="SierraCommandsContainer" type="HBoxContainer" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 6
 script = ExtResource("3_rs6cd")
 
 [node name="Walk" type="TextureButton" parent="PanelContainer/HBoxContainer/SierraCommandsContainer"]
@@ -196,7 +209,6 @@ texture_normal = ExtResource("11_ox5dl")
 
 [node name="Quit" type="TextureButton" parent="PanelContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
 texture_filter = 1
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_n6gsu")
