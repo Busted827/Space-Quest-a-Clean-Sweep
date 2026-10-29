@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://5ei4g2dbdhfn"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/props/mop/prop_mop.gd" id="1_qjlak"]
+
+[node name="Mop" type="Area2D" unique_id=150541379]
+script = ExtResource("1_qjlak")
+script_name = "Mop"
+description = "Mop"
+cursor = 1
+interaction_polygon = PackedVector2Array(-9, -84, 9, -84, 9, 0, -9, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1768301001]
+texture_filter = 1
+offset = Vector2(0, -42)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1029367970]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1052923611]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=502815484]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

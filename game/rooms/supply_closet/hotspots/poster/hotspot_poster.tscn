@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://1fc1mh4yf7nt"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/hotspots/poster/hotspot_poster.gd" id="1_3y3yv"]
+
+[node name="Poster" type="Area2D" unique_id=36212696]
+script = ExtResource("1_3y3yv")
+script_name = "Poster"
+description = "Poster"
+cursor = 1
+interaction_polygon = PackedVector2Array(-35, -35, 35, -35, 35, 35, -35, 35)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1281483098]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

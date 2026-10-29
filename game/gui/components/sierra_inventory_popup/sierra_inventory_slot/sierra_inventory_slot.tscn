@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ml5dcm5qgyt1"]
+
+[ext_resource type="Theme" uid="uid://c4g11s6mvv63d" path="res://game/gui/resources/gui_theme.tres" id="1_ofw5b"]
+[ext_resource type="Script" uid="uid://bqie870bu0w31" path="res://game/gui/components/sierra_inventory_popup/sierra_inventory_slot/sierra_inventory_slot_custom.gd" id="2_j0p7w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjuu5"]
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.482353, 0.482353, 0.482353, 1)
+
+[node name="SierraInventorySlot" type="PanelContainer"]
+custom_minimum_size = Vector2(24, 24)
+theme = ExtResource("1_ofw5b")
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjuu5")
+script = ExtResource("2_j0p7w")

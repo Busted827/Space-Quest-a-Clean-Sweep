@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bn3r7tfrrygim"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/hotspots/ceiling_tile/hotspot_ceiling_tile.gd" id="1_o1bj6"]
+
+[node name="CeilingTile" type="Area2D" unique_id=400847759]
+script = ExtResource("1_o1bj6")
+script_name = "CeilingTile"
+description = "Ceiling Tile"
+cursor = 1
+interaction_polygon = PackedVector2Array(-40, -15, 40, -15, 40, 15, -40, 15)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1682663485]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

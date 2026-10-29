@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://fagbvpyps3mj"]
+
+[ext_resource type="Script" path="res://game/characters/roger/character_roger.gd" id="1_6ukfr"]
+[ext_resource type="Texture2D" uid="uid://3n6sjmwxen0i" path="res://game/placeholders/roger.png" id="2_a8m0v"]
+
+[node name="CharacterRoger" type="Area2D" unique_id=1374974702]
+script = ExtResource("1_6ukfr")
+script_name = "Roger"
+description = "Roger Wilco"
+cursor = 8
+interaction_polygon = PackedVector2Array(-18, -110, 18, -110, 18, 0, -18, 0)
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=2502877]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1197788168]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2112374511]
+texture_filter = 1
+texture = ExtResource("2_a8m0v")
+offset = Vector2(0, -55)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=905762906]
+visible = false
+polygon = PackedVector2Array(-18, -110, 18, -110, 18, 0, -18, 0)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=111450550]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

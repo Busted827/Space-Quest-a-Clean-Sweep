@@ -1,0 +1,1 @@
+extends "sierra_bar.gd"

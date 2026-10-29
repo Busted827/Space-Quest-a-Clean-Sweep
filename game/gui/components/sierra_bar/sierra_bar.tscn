@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://fht015etogxj"]
+
+[ext_resource type="Theme" uid="uid://c4g11s6mvv63d" path="res://game/gui/resources/gui_theme.tres" id="1_j5rt6"]
+[ext_resource type="Script" uid="uid://8earb13yn8kf" path="res://game/gui/components/sierra_bar/sierra_bar_custom.gd" id="2_l561w"]
+[ext_resource type="PackedScene" uid="uid://0vcxn3tnh6to" path="res://game/gui/components/hover_text/hover_text.tscn" id="3_q6hqu"]
+
+[node name="SierraBar" type="Control" groups=["popochiu_gui_component"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("1_j5rt6")
+script = ExtResource("2_l561w")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 15.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LblGameName" type="Label" parent="PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Space Quest: A Clean Sweep"
+
+[node name="HoverText" parent="PanelContainer/HBoxContainer" instance=ExtResource("3_q6hqu")]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = null
+
+[node name="LblScore" type="Label" parent="PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Score: 0"

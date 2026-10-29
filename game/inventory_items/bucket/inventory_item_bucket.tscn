@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://ddqm3fs6iiupk"]
+
+[ext_resource type="Texture2D" uid="uid://bsmkruarj4fpv" path="res://game/placeholders/inv_bucket.png" id="1_eqgvl"]
+[ext_resource type="Script" path="res://game/inventory_items/bucket/inventory_item_bucket.gd" id="1_k5u8u"]
+
+[node name="ItemBucket" type="TextureRect" unique_id=1617798852]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_eqgvl")
+stretch_mode = 5
+script = ExtResource("1_k5u8u")
+script_name = "Bucket"
+description = "bucket"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2056236960]

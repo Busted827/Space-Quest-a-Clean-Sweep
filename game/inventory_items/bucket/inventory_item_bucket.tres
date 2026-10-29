@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cv5farfn4xjbq"]
+
+[ext_resource type="Script" path="res://game/inventory_items/bucket/inventory_item_bucket_state.gd" id="1_btrod"]
+
+[resource]
+resource_name = "Bucket"
+script = ExtResource("1_btrod")
+script_name = "Bucket"
+scene = "res://game/inventory_items/bucket/inventory_item_bucket.tscn"
