@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://daww4uy75woo6"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/hotspots/crate/hotspot_crate.gd" id="1_1tn44"]
+
+[node name="Crate" type="Area2D" unique_id=902498708]
+script = ExtResource("1_1tn44")
+script_name = "Crate"
+description = "Crate"
+cursor = 1
+interaction_polygon = PackedVector2Array(-70, -43, 70, -43, 70, 43, -70, 43)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=759982785]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

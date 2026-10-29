@@ -1,0 +1,1 @@
+extends "sierra_inventory_slot.gd"

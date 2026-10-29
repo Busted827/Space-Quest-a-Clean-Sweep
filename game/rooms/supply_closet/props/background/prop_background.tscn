@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ogptc2vmc3pr"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/props/background/prop_background.gd" id="1_rxgba"]
+
+[node name="Background" type="Area2D" unique_id=116451358]
+z_index = -1
+input_pickable = false
+script = ExtResource("1_rxgba")
+script_name = "Background"
+description = "Background"
+clickable = false
+baseline = -180
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2048515289]
+texture_filter = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=241255655]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=613403084]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=847875792]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

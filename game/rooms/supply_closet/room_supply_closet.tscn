@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://cm7dx88xnwidh"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/room_supply_closet.gd" id="1_jyp7g"]
+[ext_resource type="PackedScene" uid="uid://ogptc2vmc3pr" path="res://game/rooms/supply_closet/props/background/prop_background.tscn" id="2_fdfeo"]
+[ext_resource type="PackedScene" uid="uid://dn7gceqmoph6v" path="res://game/rooms/supply_closet/walkable_areas/floor/walkable_area_floor.tscn" id="2_nrmxy"]
+[ext_resource type="Texture2D" uid="uid://cmpy6vitjb4kl" path="res://game/placeholders/supply_closet_bg.png" id="3_x0ctm"]
+[ext_resource type="PackedScene" uid="uid://5ei4g2dbdhfn" path="res://game/rooms/supply_closet/props/mop/prop_mop.tscn" id="4_r47fr"]
+[ext_resource type="Texture2D" uid="uid://huqgrlrxfqn6" path="res://game/placeholders/mop.png" id="5_04apo"]
+[ext_resource type="PackedScene" uid="uid://7mlh4lm8eima" path="res://game/rooms/supply_closet/props/bucket/prop_bucket.tscn" id="6_owqcb"]
+[ext_resource type="Texture2D" uid="uid://d01a0bl127ii2" path="res://game/placeholders/bucket.png" id="7_vjk5e"]
+[ext_resource type="PackedScene" uid="uid://daww4uy75woo6" path="res://game/rooms/supply_closet/hotspots/crate/hotspot_crate.tscn" id="8_y168r"]
+[ext_resource type="PackedScene" uid="uid://bn3r7tfrrygim" path="res://game/rooms/supply_closet/hotspots/ceiling_tile/hotspot_ceiling_tile.tscn" id="9_y168r"]
+[ext_resource type="PackedScene" uid="uid://briwst2b7ijj1" path="res://game/rooms/supply_closet/hotspots/shelves/hotspot_shelves.tscn" id="10_wbhp4"]
+[ext_resource type="PackedScene" uid="uid://1fc1mh4yf7nt" path="res://game/rooms/supply_closet/hotspots/poster/hotspot_poster.tscn" id="11_ig4hl"]
+[ext_resource type="PackedScene" uid="uid://crevnax3dv451" path="res://game/rooms/supply_closet/hotspots/locker/hotspot_locker.tscn" id="12_p7taa"]
+[ext_resource type="PackedScene" uid="uid://muj7ghf2obbt" path="res://game/rooms/supply_closet/hotspots/door/hotspot_door.tscn" id="13_2spmd"]
+[ext_resource type="PackedScene" uid="uid://lp8nli0adf2f" path="res://game/rooms/supply_closet/markers/start/marker_start.tscn" id="15_tta5k"]
+[ext_resource type="PackedScene" uid="uid://c51scltvxu1dw" path="res://game/rooms/supply_closet/regions/depth/region_depth.tscn" id="15_ik04p"]
+
+[node name="RoomSupplyCloset" type="Node2D" unique_id=371513164]
+script = ExtResource("1_jyp7g")
+script_name = "SupplyCloset"
+width = 640
+height = 360
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=993543324]
+
+[node name="Floor" parent="WalkableAreas" unique_id=1203375644 instance=ExtResource("2_nrmxy")]
+position = Vector2(320, 356)
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-110, -100, 300, -100, 318, 0, -318, 0, -318, -50, -110, -50)])
+
+[node name="Props" type="Node2D" parent="." unique_id=733730930]
+
+[node name="Background" parent="Props" unique_id=116451358 instance=ExtResource("2_fdfeo")]
+position = Vector2(320, 180)
+texture = ExtResource("3_x0ctm")
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="Mop" parent="Props" unique_id=150541379 instance=ExtResource("4_r47fr")]
+position = Vector2(420, 300)
+texture = ExtResource("5_04apo")
+description = "mop"
+walk_to_point = Vector2(-30, 16)
+
+[node name="Bucket" parent="Props" unique_id=983236967 instance=ExtResource("6_owqcb")]
+position = Vector2(446, 304)
+texture = ExtResource("7_vjk5e")
+description = "bucket"
+walk_to_point = Vector2(-30, 16)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=1670352046]
+
+[node name="Crate" parent="Hotspots" unique_id=902498708 instance=ExtResource("8_y168r")]
+position = Vector2(130, 257)
+description = "crate"
+walk_to_point = Vector2(0, 63)
+
+[node name="CeilingTile" parent="Hotspots" unique_id=400847759 instance=ExtResource("9_y168r")]
+position = Vector2(130, 25)
+description = "ceiling tile"
+walk_to_point = Vector2(0, 295)
+
+[node name="Shelves" parent="Hotspots" unique_id=438414624 instance=ExtResource("10_wbhp4")]
+position = Vector2(286, 149)
+description = "shelves"
+walk_to_point = Vector2(0, 121)
+
+[node name="Poster" parent="Hotspots" unique_id=36212696 instance=ExtResource("11_ig4hl")]
+position = Vector2(395, 115)
+description = "poster"
+walk_to_point = Vector2(0, 155)
+
+[node name="Locker" parent="Hotspots" unique_id=316751161 instance=ExtResource("12_p7taa")]
+position = Vector2(505, 185)
+description = "locker"
+walk_to_point = Vector2(0, 115)
+
+[node name="Door" parent="Hotspots" unique_id=270366059 instance=ExtResource("13_2spmd")]
+position = Vector2(603, 190)
+description = "door"
+walk_to_point = Vector2(-3, 120)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1951323163]
+
+[node name="Depth" parent="Regions" unique_id=1938585778 instance=ExtResource("15_ik04p")]
+position = Vector2(320, 298)
+description = "depth"
+scaling = true
+scale_top = 0.75
+scale_bottom = 1.05
+
+[node name="Markers" type="Node2D" parent="." unique_id=1591781919]
+
+[node name="Start" parent="Markers" unique_id=1484321764 instance=ExtResource("15_tta5k")]
+position = Vector2(150, 318)
+
+[node name="Characters" type="Node2D" parent="." unique_id=14289091]

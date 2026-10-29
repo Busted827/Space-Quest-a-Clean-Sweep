@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://7mlh4lm8eima"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/props/bucket/prop_bucket.gd" id="1_3ld70"]
+
+[node name="Bucket" type="Area2D" unique_id=983236967]
+script = ExtResource("1_3ld70")
+script_name = "Bucket"
+description = "Bucket"
+cursor = 1
+interaction_polygon = PackedVector2Array(-15, -30, 15, -30, 15, 0, -15, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=823656587]
+texture_filter = 1
+offset = Vector2(0, -15)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=298151431]
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1262033559]
+visible = false
+modulate = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1403226180]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

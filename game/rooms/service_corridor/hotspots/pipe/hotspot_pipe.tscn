@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://brs1l6yk0jekk"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/hotspots/pipe/hotspot_pipe.gd" id="1_g4gi8"]
+
+[node name="Pipe" type="Area2D" unique_id=312808120]
+script = ExtResource("1_g4gi8")
+script_name = "Pipe"
+description = "Pipe"
+cursor = 1
+interaction_polygon = PackedVector2Array(-16, -55, 16, -55, 16, 55, -16, 55)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=862121596]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

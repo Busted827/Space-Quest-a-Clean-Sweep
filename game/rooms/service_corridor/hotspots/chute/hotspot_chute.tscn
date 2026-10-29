@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dyad0bujbxhmo"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/hotspots/chute/hotspot_chute.gd" id="1_xymr6"]
+
+[node name="Chute" type="Area2D" unique_id=2045754327]
+script = ExtResource("1_xymr6")
+script_name = "Chute"
+description = "Chute"
+cursor = 1
+interaction_polygon = PackedVector2Array(-16, -22, 16, -22, 16, 22, -16, 22)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=965974755]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

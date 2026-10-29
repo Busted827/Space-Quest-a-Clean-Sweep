@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://867b3tphuxt6"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/room_service_corridor_state.gd" id="1_2djau"]
+
+[resource]
+resource_name = "ServiceCorridor"
+script = ExtResource("1_2djau")
+script_name = "ServiceCorridor"
+scene = "res://game/rooms/service_corridor/room_service_corridor.tscn"

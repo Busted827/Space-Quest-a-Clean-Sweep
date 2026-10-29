@@ -1,0 +1,67 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Space Quest: A Clean Sweep"
+run/main_scene="res://game/rooms/supply_closet/room_supply_closet.tscn"
+config/features=PackedStringArray("4.7")
+
+[autoload]
+
+Globals="*uid://bb6hngos7cey5"
+Cursor="*uid://c2pqh7ajiuiy0"
+E="*uid://rda8wggldt5o"
+R="*uid://cne2ui77y0iys"
+C="*uid://cjv8mgklnkriv"
+I="*uid://b2gx2yymnyypx"
+D="*uid://do3egqj3pjdjv"
+A="*uid://s6p13ek0bn5i"
+G="*uid://blk6nfpfiqrd2"
+T="*uid://30lm6k5s368s"
+
+[display]
+
+window/size/viewport_width=640
+window/size/mode=3
+window/size/viewport_height=360
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/popochiu/editor/gizmos/plugin.cfg", "res://addons/popochiu/editor/importers/plugin.cfg", "res://addons/popochiu/plugin.cfg")
+
+[input]
+
+popochiu-interact={
+&"deadzone": 0.5,
+&"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":32,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+popochiu-look={
+&"deadzone": 0.5,
+&"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":32,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+popochiu-skip={
+&"deadzone": 0.5,
+&"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":16,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194305,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://game/characters/roger/character_roger.gd", "res://game/inventory_items/mop/inventory_item_mop.gd", "res://game/inventory_items/bucket/inventory_item_bucket.gd", "res://game/inventory_items/keycard/inventory_item_keycard.gd", "res://game/rooms/supply_closet/room_supply_closet.gd", "res://game/rooms/supply_closet/props/background/prop_background.gd", "res://game/rooms/supply_closet/props/mop/prop_mop.gd", "res://game/rooms/supply_closet/props/bucket/prop_bucket.gd", "res://game/rooms/supply_closet/hotspots/crate/hotspot_crate.gd", "res://game/rooms/supply_closet/hotspots/ceiling_tile/hotspot_ceiling_tile.gd", "res://game/rooms/supply_closet/hotspots/shelves/hotspot_shelves.gd", "res://game/rooms/supply_closet/hotspots/poster/hotspot_poster.gd", "res://game/rooms/supply_closet/hotspots/locker/hotspot_locker.gd", "res://game/rooms/supply_closet/hotspots/door/hotspot_door.gd")
+
+[popochiu]
+
+pixel/pixel_art_textures=true

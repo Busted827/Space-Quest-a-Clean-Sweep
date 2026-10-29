@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ccoyd02l4ii6m"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/walkable_areas/floor_left/walkable_area_floor_left.gd" id="1_6fj4x"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_6fj4x"]
+vertices = PackedVector2Array(10, 0, -318, 0, -318, -104, 10, -104)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-318, -104, 10, -104, 10, 0, -318, 0)])
+agent_radius = 0.0
+
+[node name="FloorLeft" type="Node2D" unique_id=2127241614]
+position = Vector2(320, 356)
+script = ExtResource("1_6fj4x")
+script_name = "FloorLeft"
+description = "Floor Left"
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(-318, -104, 10, -104, 10, 0, -318, 0)])
+
+[node name="Perimeter" type="NavigationRegion2D" parent="." unique_id=35301859]
+modulate = Color(0, 1, 0, 1)
+navigation_polygon = SubResource("NavigationPolygon_6fj4x")

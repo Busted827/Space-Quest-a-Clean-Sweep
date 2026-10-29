@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://cof70nbkqswpk"]
+
+[ext_resource type="Script" path="res://game/rooms/supply_closet/room_supply_closet_state.gd" id="1_uh52k"]
+
+[resource]
+resource_name = "SupplyCloset"
+script = ExtResource("1_uh52k")
+script_name = "SupplyCloset"
+scene = "res://game/rooms/supply_closet/room_supply_closet.tscn"

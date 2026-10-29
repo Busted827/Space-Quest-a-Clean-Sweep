@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://bgxgdhicur7r8"]
+
+[ext_resource type="Script" path="res://game/inventory_items/mop/inventory_item_mop_state.gd" id="1_e6b3s"]
+
+[resource]
+resource_name = "Mop"
+script = ExtResource("1_e6b3s")
+script_name = "Mop"
+scene = "res://game/inventory_items/mop/inventory_item_mop.tscn"

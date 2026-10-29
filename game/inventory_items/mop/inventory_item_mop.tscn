@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://icffkp33kp0t"]
+
+[ext_resource type="Texture2D" uid="uid://k01cshkp6ij5" path="res://game/placeholders/inv_mop.png" id="1_765sr"]
+[ext_resource type="Script" path="res://game/inventory_items/mop/inventory_item_mop.gd" id="1_j2iff"]
+
+[node name="ItemMop" type="TextureRect" unique_id=1070190221]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_765sr")
+stretch_mode = 5
+script = ExtResource("1_j2iff")
+script_name = "Mop"
+description = "mop"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=367791025]

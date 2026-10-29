@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bqtobq6iec66i"]
+
+[ext_resource type="Script" path="res://game/rooms/service_corridor/hotspots/lifts/hotspot_lifts.gd" id="1_1ixpb"]
+
+[node name="Lifts" type="Area2D" unique_id=210794697]
+script = ExtResource("1_1ixpb")
+script_name = "Lifts"
+description = "Lifts"
+cursor = 1
+interaction_polygon = PackedVector2Array(-37, -83, 37, -83, 37, 83, -37, 83)
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=1208577733]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
